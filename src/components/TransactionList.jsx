@@ -1,16 +1,37 @@
 function TransactionList({ transactions, deleteTransaction }) {
   return (
     <div>
-      <h2>Daftar Transaksi</h2>
+      <h2 className="text-xl font-semibold mb-4">Transactions</h2>
 
-      <ul>
-        {transactions.map((tx, index) => (
-          <li key={index}>
-            {tx.name} - {tx.amount} [{tx.category}]
-            <button onClick={() => deleteTransaction(index)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+      <table className="w-full bg-white rounded shadow">
+        <thead className="bg-gray-100">
+          <tr>
+            <th className="p-2 text-left">Name</th>
+            <th className="p-2 text-left">Category</th>
+            <th className="p-2 text-left">Amount</th>
+            <th className="p-2 text-left">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {transactions.map((tx, index) => (
+            <tr key={index} className="border-t">
+              <td className="p-2">{tx.name}</td>
+              <td className="p-2">{tx.category}</td>
+              <td className="p-2">Rp {tx.amount}</td>
+
+              <td className="p-2">
+                <button
+                  className="text-red-500 hover:text-red-700"
+                  onClick={() => deleteTransaction(index)}
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
