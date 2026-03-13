@@ -19,4 +19,4 @@ Personal finance tracker built with React + Vite.
 
 ## Live Demo
 
-https://finance-tracker-reactdeploy.vercel.app/
+finance-tracker-react-eight.vercel.app
