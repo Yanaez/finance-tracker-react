@@ -7,12 +7,15 @@ function TopCategories({ transactions }) {
 
   return (
     <div>
-      <h2>Top Spending</h2>
-
-      <ul>
+      <ul className="space-y-2">
         {sorted.map(([category, amount]) => (
-          <li key={category}>
-            {category} : {amount}
+          <li
+            key={category}
+            className="flex justify-between bg-purple-50 p-3 rounded-lg"
+          >
+            <span className="font-medium text-purple-700">{category}</span>
+
+            <span className="font-semibold text-purple-900">Rp {amount}</span>
           </li>
         ))}
       </ul>

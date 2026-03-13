@@ -21,29 +21,38 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-purple-100 p-6">
       <div className="max-w-5xl mx-auto space-y-6">
-        <h1 className="text-3xl font-bold text-center">Finance Tracker</h1>
+        <h1 className="text-4xl font-bold text-center text-purple-700 tracking-wide">
+          Finance Tracker
+        </h1>
 
         <BalanceCards transactions={transactions} />
 
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
           <QuickAdd addTransaction={addTransaction} />
         </div>
 
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
+          <h2 className="text-lg font-semibold text-purple-700 mb-4">
+            Expense Chart
+          </h2>
+
           <ExpenseChart transactions={transactions} />
         </div>
 
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-6 rounded-xl shadow-lg border border-purple-100">
+          <h2 className="text-lg font-semibold text-purple-700 mb-4">
+            Top Spending
+          </h2>
           <TopCategories transactions={transactions} />
         </div>
 
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
           <TransactionForm addTransaction={addTransaction} />
         </div>
 
-        <div className="bg-white p-4 rounded shadow">
+        <div className="bg-white p-4 rounded-xl shadow hover:shadow-md transition">
           <TransactionList
             transactions={transactions}
             deleteTransaction={deleteTransaction}

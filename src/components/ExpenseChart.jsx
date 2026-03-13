@@ -21,6 +21,7 @@ function ExpenseChart({ transactions }) {
     datasets: [
       {
         label: "Expenses",
+        backgroundColor: ["#7C3AED", "#A78BFA", "#C4B5FD", "#DDD6FE"],
         data: Object.values(categories),
       },
     ],
@@ -28,7 +29,6 @@ function ExpenseChart({ transactions }) {
 
   return (
     <div style={{ width: "300px" }}>
-      <h2>Expense Chart</h2>
       <Pie data={data} />
     </div>
   );

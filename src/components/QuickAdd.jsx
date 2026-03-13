@@ -29,7 +29,7 @@ function QuickAdd({ addTransaction }) {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <input
-        className="flex-1 border rounded-lg p-2"
+        className="flex-1 border border-purple-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-300 rounded-lg p-2 outline-none"
         type="text"
         placeholder="contoh: makan 20000"
         value={text}
@@ -37,7 +37,7 @@ function QuickAdd({ addTransaction }) {
       />
 
       <button
-        className="bg-blue-500 text-white px-4 rounded-lg hover:bg-blue-600"
+        className="bg-purple-600 text-white px-4 rounded-lg hover:bg-purple-700 transition"
         type="submit"
       >
         Add
